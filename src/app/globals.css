@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../../public/assets/fonts/Nunito/static/Nunito-Regular.ttf');
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/assets/fonts/Inter/static/Inter_18pt-Regular.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Standard */
+}
+body {
+    font-family: Inter, Nunito, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+@layer base {
+    :root {
+        --background: 227 100% 95%;
+        --foreground: 227 5% 0%;
+        --card: 227 50% 90%;
+        --card-foreground: 227 5% 10%;
+        --popover: 227 100% 95%;
+        --popover-foreground: 227 100% 0%;
+        --primary: 227 89.5% 62.7%;
+        --primary-foreground: 0 0% 0%;
+        --secondary: 227 30% 70%;
+        --secondary-foreground: 0 0% 0%;
+        --muted: 189 30% 85%;
+        --muted-foreground: 227 5% 35%;
+        --accent: 189 30% 80%;
+        --accent-foreground: 227 5% 10%;
+        --destructive: 0 100% 30%;
+        --destructive-foreground: 227 5% 90%;
+        --border: 227 30% 50%;
+        --input: 227 30% 18%;
+        --ring: 227 89.5% 62.7%;
+        --radius: 0.5rem;
+    }
+    .dark {
+        --background: 227 50% 5%;
+        --foreground: 227 5% 90%;
+        --card: 227 50% 0%;
+        --card-foreground: 227 5% 90%;
+        --popover: 227 50% 5%;
+        --popover-foreground: 227 5% 90%;
+        --primary: 227 89.5% 62.7%;
+        --primary-foreground: 0 0% 0%;
+        --secondary: 227 30% 10%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 189 30% 15%;
+        --muted-foreground: 227 5% 60%;
+        --accent: 189 30% 15%;
+        --accent-foreground: 227 5% 90%;
+        --destructive: 0 100% 30%;
+        --destructive-foreground: 227 5% 90%;
+        --border: 227 30% 18%;
+        --input: 227 30% 18%;
+        --ring: 227 89.5% 62.7%;
+        --radius: 0.5rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+    .menu-drawer-customise div {
+        @apply w-full;
+    }
+}
+
+.inter-font {
+    font-family: Inter;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #4b70f500;
+    background-color: #f5f5f500;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: #4b70f500;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4b70f569;
+    border-radius: 20px;
+}
